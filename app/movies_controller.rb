@@ -27,24 +27,25 @@ end
 
 def can_be_created_in_a_block(args = { title: "Home Alone", release_date: 1990 })
   Movie.create do |m|
-    __
+    m.title = args[:title]
+    m.release_date = args[:release_date]
   end
 end
 
 def can_get_the_first_item_in_the_database
-  __
+  Movie.first
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.last
 end
 
 def can_get_size_of_the_database
-  __
+  Movie.count
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.find(1)
 end
 
 def can_find_by_multiple_attributes
@@ -52,7 +53,7 @@ def can_find_by_multiple_attributes
   # title == "Title"
   # release_date == 2000
   # director == "Me"
-  __
+  Movie.find_by(title: "Title", release_date: 2000, director: "Me")
 end
 
 def can_find_using_where_clause_and_be_sorted
