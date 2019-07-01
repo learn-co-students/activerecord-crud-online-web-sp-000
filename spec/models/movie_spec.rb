@@ -17,17 +17,19 @@ describe 'Movie' do
       movie.title = "The Matrix"
       expect(movie.title).to eq("The Matrix")
     end
+  
 
     it 'has a release date' do
       movie.release_date = 1999
       expect(movie.release_date).to eq(1999)
     end
 
+
     it 'has a director' do
       movie.director = "The Wachowski Sisters"
       expect(movie.director).to eq("The Wachowski Sisters")
     end
-
+  
     it 'has a lead actor/actress' do
       movie.lead = "Keanu Reeves"
       expect(movie.lead).to eq("Keanu Reeves")
@@ -63,11 +65,15 @@ describe 'Movie' do
         can_be_instantiated_and_then_saved
         expect(Movie.find_by(title: "This is a title.").title).to eq("This is a title.")
       end
+    end
+    
+
 
       it 'can be created with a hash of attributes' do
         movie = can_be_created_with_a_hash_of_attributes
         expect(Movie.find_by(attributes)).to eq(movie)
       end
+
 
       it 'can be created in a block when no args are passed' do
         movie = can_be_created_in_a_block
@@ -98,6 +104,7 @@ describe 'Movie' do
         expect(movie.title).to eq("Movie_0")
       end
 
+
       it 'can get the last item in the databse' do
         movie = can_get_the_last_item_in_the_database
         expect(movie.title).to eq("Movie_4")
@@ -112,10 +119,12 @@ describe 'Movie' do
         expect(can_find_the_first_item_from_the_database_using_id.title).to eq("Movie_0")
       end
 
+
       it 'can retrieve from the database using different attributes' do
         movie = Movie.create(title: "Title", release_date: 2000, director: "Me")
         expect(can_find_by_multiple_attributes).to eq(movie)
       end
+
 
       it 'can use a where clause and be sorted' do
         expect(can_find_using_where_clause_and_be_sorted.map{|m| m.title}).to eq(["Movie_4", "Movie_3"])
@@ -130,6 +139,7 @@ describe 'Movie' do
           movie.reload
         }.to change{ movie.title }.from("Awesome Flick").to("Even Awesomer Flick")
       end
+
 
       it 'can be updated using #update' do
         can_update_using_update_method
@@ -153,5 +163,4 @@ describe 'Movie' do
         expect(Movie.all.size).to eq(0)
       end
     end
-  end
 end
