@@ -52,11 +52,18 @@ def can_find_the_first_item_from_the_database_using_id
 end
 
 def can_find_by_multiple_attributes
+  
   # Search Values:
   # title == "Title"
   # release_date == 2000
   # director == "Me"
   __
+  Movie.find_by(title: "Title")
+  Movie.find_by(release_date: 2000)
+  Movie.find_by(director: "Me")
+  binding.pry 
+  # Movie.where(lead: "lead")
+  # Movie.where(in_theaters: true)
   
 end
 
@@ -64,6 +71,7 @@ def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by 
   # release date descending
   __
+
 end
 
 def can_be_found_updated_and_saved
