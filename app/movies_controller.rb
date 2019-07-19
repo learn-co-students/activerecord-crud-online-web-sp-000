@@ -4,11 +4,12 @@
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
 #   movie = __                     #   movie = Movie.new
 # end                              # end
+require 'pry'
 
 def can_be_instantiated_and_then_saved
-  movie = __
+  movie = Movie.new 
   movie.title = "This is a title."
-  __
+  movie.save 
 end
 
 def can_be_created_with_a_hash_of_attributes
@@ -20,33 +21,34 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = __
+  Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(title: "Home Alone", release_date: 1990)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
   
   Movie.create do |m|
-    __
-  end
+      m.title = title  
+      m.release_date = release_date
+    end 
 end
 
 def can_get_the_first_item_in_the_database
-  __
+   Movie.first 
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.last 
 end
 
 def can_get_size_of_the_database
-  __
+  Movie.count
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.find_by(id: 1)
 end
 
 def can_find_by_multiple_attributes
@@ -55,6 +57,7 @@ def can_find_by_multiple_attributes
   # release_date == 2000
   # director == "Me"
   __
+  
 end
 
 def can_find_using_where_clause_and_be_sorted
