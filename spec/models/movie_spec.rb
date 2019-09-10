@@ -69,20 +69,14 @@ describe 'Movie' do
         expect(Movie.find_by(attributes)).to eq(movie)
       end
 
-      it 'can be created in a block when no args are passed' do
+      it 'can be created in a block' do
         movie = can_be_created_in_a_block
 
-        expect(movie.title).to eq("Home Alone")
-        expect(movie.release_date).to eq(1990)
+        expect(Movie.last).to eq(movie)
+        expect(Movie.last.title).to eq("Home Alone")
+        expect(Movie.last.release_date).to eq(1990)
       end
-
-      it 'can be created in a block' do
-        args = { title: "The Room", release_date: 2003 }
-        movie = can_be_created_in_a_block(args)
-
-        expect(movie.title).to eq("The Room")
-        expect(movie.release_date).to eq(2003)
-      end
+    end
    end
 
     context 'reading' do
@@ -154,4 +148,3 @@ describe 'Movie' do
       end
     end
   end
-end
