@@ -6,9 +6,10 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
-  movie = __
-  movie.title = "This is a title."
-  __
+  new_movie = Movie.new(t)
+  new_movie.title = "This is a title."
+  new_movie.save
+  new_movie
 end
 
 def can_be_created_with_a_hash_of_attributes
@@ -23,7 +24,7 @@ def can_be_created_with_a_hash_of_attributes
   movie = __
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(args = ___)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
