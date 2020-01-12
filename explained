@@ -1,0 +1,135 @@
+D, [2020-01-12T05:47:05.970869 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Movie
+D, [2020-01-12T05:47:06.094001 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.094156 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.103656 #1374] DEBUG -- :   [1m[35m (9.0ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.104306 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.105445 #1374] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.113276 #1374] DEBUG -- :   [1m[35m (7.3ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.113999 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.115110 #1374] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.115491 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.118557 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.118920 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.125995 #1374] DEBUG -- :   [1m[35m (6.8ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.128802 #1374] DEBUG -- :   [1m[35m (2.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.129281 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.138101 #1374] DEBUG -- :   [1m[35m (8.6ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.139215 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.141301 #1374] DEBUG -- :   [1m[35m (1.9ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.141630 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  inherits from ActiveRecord::Base
+  Movie.new
+D, [2020-01-12T05:47:06.142809 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.143492 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.166572 #1374] DEBUG -- :   [1m[35m (22.9ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.166952 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.167137 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.173989 #1374] DEBUG -- :   [1m[35m (6.7ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.174611 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.174996 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.175531 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.187103 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.187267 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.193118 #1374] DEBUG -- :   [1m[35m (5.7ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.193854 #1374] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.194310 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.201201 #1374] DEBUG -- :   [1m[35m (6.7ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.201900 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.202596 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.202846 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+    has a title
+D, [2020-01-12T05:47:06.203981 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.204241 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.209904 #1374] DEBUG -- :   [1m[35m (5.4ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.210503 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.210883 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.217802 #1374] DEBUG -- :   [1m[35m (6.7ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.218543 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.219101 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.219421 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.220535 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.220867 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.227947 #1374] DEBUG -- :   [1m[35m (6.8ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.228402 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.228768 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.268152 #1374] DEBUG -- :   [1m[35m (39.1ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.268856 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.269248 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.269534 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+    has a release date
+D, [2020-01-12T05:47:06.272795 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.273091 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.280821 #1374] DEBUG -- :   [1m[35m (7.5ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.281404 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.281923 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.288951 #1374] DEBUG -- :   [1m[35m (6.8ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.289336 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.289639 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.289797 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.290423 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.290621 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.298158 #1374] DEBUG -- :   [1m[35m (7.1ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.300195 #1374] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.301506 #1374] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.309696 #1374] DEBUG -- :   [1m[35m (7.9ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.310418 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.310816 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.311041 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+    has a director
+D, [2020-01-12T05:47:06.313394 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.314461 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.321284 #1374] DEBUG -- :   [1m[35m (6.5ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.322354 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.322854 #1374] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.329984 #1374] DEBUG -- :   [1m[35m (6.9ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.330708 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.331521 #1374] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.331778 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.332453 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.332672 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.379413 #1374] DEBUG -- :   [1m[35m (46.5ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.379840 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.380117 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.386294 #1374] DEBUG -- :   [1m[35m (6.0ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.386708 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.386944 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.387105 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+    has a lead actor/actress
+D, [2020-01-12T05:47:06.388154 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.388285 #1374] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.394221 #1374] DEBUG -- :   [1m[35m (5.8ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.394603 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.394819 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.399351 #1374] DEBUG -- :   [1m[35m (4.4ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.399605 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.399746 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.399858 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+D, [2020-01-12T05:47:06.414509 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+D, [2020-01-12T05:47:06.414647 #1374] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+D, [2020-01-12T05:47:06.422486 #1374] DEBUG -- :   [1m[35m (7.6ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+D, [2020-01-12T05:47:06.423269 #1374] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.423644 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+D, [2020-01-12T05:47:06.430433 #1374] DEBUG -- :   [1m[35m (6.6ms)[0m  [1m[31mDELETE FROM "movies";[0m
+D, [2020-01-12T05:47:06.431040 #1374] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+D, [2020-01-12T05:47:06.431469 #1374] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'movies';[0m
+D, [2020-01-12T05:47:06.431688 #1374] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+    has an in theaters flag (FAILED - 1)
+
+Failures:
+
+  1) Movie Movie.new has an in theaters flag
+     Failure/Error: expect(movie.in_theaters?).to be_falsey
+
+       expected: falsey value
+            got: true
+     # ./spec/models/movie_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+Finished in 0.33993 seconds (files took 1.4 seconds to load)
+6 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/movie_spec.rb:36 # Movie Movie.new has an in theaters flag
+
