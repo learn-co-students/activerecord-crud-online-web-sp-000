@@ -7,14 +7,11 @@
 
 require 'pry'
 
-def save
-  self
-end
 
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
-  movie.save
+  movie
 end
 
 def can_be_created_with_a_hash_of_attributes
@@ -33,7 +30,7 @@ def can_be_created_with_a_hash_of_attributes
   movie.director = attributes[:director]
   movie.lead = attributes[:lead]
   movie.in_theaters = attributes[:in_theaters]
-
+  movie
 end
 
 def can_be_created_in_a_block(args = {})
@@ -50,22 +47,23 @@ def can_be_created_in_a_block(args = {})
       m.release_date = args[:release_date]
     end
   end
+
 end
 
 def can_get_the_first_item_in_the_database
-  __
+  return "SELECT * FROM movies ORDER BY ID ASC LIMIT 1"
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  return "SELECT * FROM movies ORDER BY ID DESC LIMIT 1"
 end
 
 def can_get_size_of_the_database
-  __
+  return "SELECT COUNT(*) FROM movies"
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.find(id)
 end
 
 def can_find_by_multiple_attributes
