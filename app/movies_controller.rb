@@ -100,18 +100,20 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  __
+  Movie.update(:title =>"A Movie")
 end
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
-  __
-  __
+  movie_to_destroy = Movie.find_by(:title => "That One Where the Guy Kicks Another Guy Once")
+  Movie.destroy(movie_to_destroy.id)
 end
 
 def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  id_array = []
+  Movie.all.map {|m| id_array << m.id }
+  Movie.destroy([id_array])
 end
