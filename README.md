@@ -1,4 +1,13 @@
-# Active Record CRUD
+
+  1) Movie Movie.new has an in theaters flag
+     Failure/Error: expect(movie.in_theaters?).to be_falsey
+
+       expected: falsey value
+            got: true
+     # ./spec/models/movie_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+Finished in 0.61595 seconds (files took 0.80794 seconds to load)
+24 examples, 1 failure# Active Record CRUD
 
 ## Objective
 
