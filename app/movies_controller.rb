@@ -80,24 +80,24 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  Movie.destroy_all 
+  Movie.update_all title: "A Movie"
 end
+
+# # Update all customers with the given attributes
+# Customer.update_all wants_email: true
+
+# # Update all books with 'Rails' in their title
+# Book.where('title LIKE ?', '%Rails%').update_all(author: 'David')
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
   foundMovie = Movie.where(title: "That One Where the Guy Kicks Another Guy Once")
-  foundMovie.delete 
+  Movie.delete(foundMovie) 
 end
-
-# user.destroy
-# User.find(15).destroy
-# User.destroy(15)
-# User.where(age: 20).destroy_all
-# User.destroy_all(age: 20)
 
 def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  Movie.destroy_all
 end
