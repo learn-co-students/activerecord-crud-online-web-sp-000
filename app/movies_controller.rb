@@ -5,15 +5,19 @@
 #   movie = __                     #   movie = Movie.new
 # end                              # end
 
+#below are ADDITIONAL methods that are not explicitly given in ActiveRecord
+
 
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
   movie.save
+  movie
 end
 
 def can_be_created_with_a_hash_of_attributes
   # Initialize movie and then and save it
+  movie = Movie.new
   attributes = {
       title: "The Sting",
       release_date: 1973,
@@ -21,7 +25,9 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.create(attributes)
+  #movie = Movie.create(attributes)
+  movie = Movie.new(attributes)
+  movie.save
 end
 
 def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
@@ -32,6 +38,9 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   Movie.create do |m|
     m.title = args[:title]
     m.release_date = args[:release_date]
+    #m.director = args[:director]
+    #m.lead = args[:lead]
+    #m.in_theaters = args[:in_theaters]
   end
 end
 
@@ -48,7 +57,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  Movie.find_by(id: 1)
+  Movie.find_by(id:1)
 end
 
 def can_find_by_multiple_attributes
