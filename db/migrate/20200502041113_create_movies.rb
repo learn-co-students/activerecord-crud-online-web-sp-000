@@ -9,9 +9,3 @@ class CreateMovies < ActiveRecord::Migration[5.2]
     end
   end
 end
-
-# title	(string)
-# release_date	(integer)
-# director	(string)
-# lead	(string)
-# in_theaters	(boolean)

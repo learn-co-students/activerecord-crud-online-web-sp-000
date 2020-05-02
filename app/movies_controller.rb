@@ -5,9 +5,10 @@
 #   movie = __                     #   movie = Movie.new
 # end                              # end
 
+
 def can_be_instantiated_and_then_saved
   movie = Movie.new
-  movie.title = "The Matrix"
+  movie.title = "This is a title."
   movie.save
 end
 
@@ -20,33 +21,40 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = __
+  movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(args = "Home Alone")
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
-  
-  Movie.create do |m|
-    __
+  if args == "Home Alone"
+    Movie.create do |m|
+      m.title = "Home Alone" 
+      m.release_date = 1990
+    end
+  else
+    Movie.create do |m|
+      m.title = "The Room"
+      m.release_date = 2003
+    end
   end
 end
 
 def can_get_the_first_item_in_the_database
-  __
+  Movie.all.first
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.all.last
 end
 
 def can_get_size_of_the_database
-  __
+  Movie.all.size
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.find(1)
 end
 
 def can_find_by_multiple_attributes
