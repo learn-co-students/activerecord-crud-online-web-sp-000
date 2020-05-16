@@ -29,7 +29,6 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
-  
   Movie.create do |m|
     m.title = args[:title]
     m.release_date = args[:release_date]
@@ -38,7 +37,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
 end
 
 def can_get_the_first_item_in_the_database
-  __
+  
 end
 
 def can_get_the_last_item_in_the_database
