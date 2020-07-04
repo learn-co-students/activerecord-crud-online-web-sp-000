@@ -1,5 +1,5 @@
 # Add seed data here. Seed your database with `rake db:seed`
-
+#all movies are created in here
 Movie.create(title: "Wargames", release_date: 1983, director: "John Badham", lead: "Matthew Broderick", in_theaters: false)
 
 Movie.create(title: "The Sting", release_date: 1973, director: "George Roy Hill", lead: "Paul Newman", in_theaters: false)
