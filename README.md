@@ -1,4 +1,5 @@
-# Active Record CRUD
+lewarn
+learnlearn learn lerarn# Active Record CRUD
 
 ## Objective
 
@@ -37,7 +38,8 @@ database so you will be able to run `learn`
 
 ### Tests
 
-Run `rspec` or `learn` to see the tests. To make them pass open
+Run `rspec
+ ` or `learn` to see the tests. To make them pass open
 `movie_controller.rb` and complete each method. It will help to open
 `spec/models/movie_spec.rb` to see exactly what each spec is testing for.
 
