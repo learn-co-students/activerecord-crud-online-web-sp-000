@@ -63,7 +63,7 @@ def can_find_by_multiple_attributes
   # director == "Me"
   Movie.find_by title: "Title", release_date: 2000, director: "Me"
 
-  # == equivalent to writing : Client.where(first_name: 'Lifo').take
+  # == equivalent to writing : Movie.where(first_name: 'Lifo').take
   # == SELECT * FROM moview WHERE (movie.title = 'Title') LIMIT 1
 
 end
@@ -71,22 +71,22 @@ end
 def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by 
   # release date descending
-  __
+  Movie.where("release_date > 2002").order("release_date desc")
 end
 
 def can_be_found_updated_and_saved
   # Updtate the title "Awesome Flick" to "Even Awesomer Flick", save it, then return it
   Movie.create(title: "Awesome Flick")
-  __
-  __
-  __
+  movie = Movie.find_by(title: "Awesome Flick")
+  movie.title = "Even Awesomer Flick"
+  movie.save
 end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  __
-  __
+  movie = Movie.find_by(title: "Wat?")
+  movie.update(title: "Wat, huh?")
 end
 
 def can_update_multiple_items_at_once
@@ -94,18 +94,18 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  __
+  Movie.update_all title: "A Movie"
 end
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
-  __
-  __
+  movie = Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
+  Movie.destroy(movie.id)
 end
 
 def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  Movie.destroy_all
 end
