@@ -99,5 +99,6 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  Movie.destroy_all
+  # Movie.destroy_all THIS WOULD WORK ALSO, BUT IF WE WANT TO BE MORE SPECIFIC WE'LL USE THE IMPLEMENTATION BELOW
+  Movie.where('title LIKE ?', '%Movie%').destroy_all
 end
