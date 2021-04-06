@@ -49,24 +49,13 @@ describe 'Movie' do
     end
   end
 
-  context '#save' do
-    it 'can be saved to the database' do
-      movie = Movie.new(attributes)
-      movie.save
-      expect(Movie.find_by(attributes)).to eq(movie)
-    end
-  end
+  
 
   context 'basic CRUD' do
     context 'creating' do
       it 'can be instantiated and then saved' do
         can_be_instantiated_and_then_saved
         expect(Movie.find_by(title: "This is a title.").title).to eq("This is a title.")
-      end
-
-      it 'can be created with a hash of attributes' do
-        movie = can_be_created_with_a_hash_of_attributes
-        expect(Movie.find_by(attributes)).to eq(movie)
       end
 
       it 'can be created in a block when no args are passed' do
@@ -112,14 +101,6 @@ describe 'Movie' do
         expect(can_find_the_first_item_from_the_database_using_id.title).to eq("Movie_0")
       end
 
-      it 'can retrieve from the database using different attributes' do
-        movie = Movie.create(title: "Title", release_date: 2000, director: "Me")
-        expect(can_find_by_multiple_attributes).to eq(movie)
-      end
-
-      it 'can use a where clause and be sorted' do
-        expect(can_find_using_where_clause_and_be_sorted.map{|m| m.title}).to eq(["Movie_4", "Movie_3"])
-      end
     end
 
     context 'updating' do
