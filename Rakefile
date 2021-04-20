@@ -1,4 +1,4 @@
-ENV["SINATRA_ENV"] ||= "development"
+# rake db:migraterake db:create rake db:migrate ENV["SINATRA_ENV"] ||= "development"
 
 require_relative './config/environment'
 require 'sinatra/activerecord/rake'
